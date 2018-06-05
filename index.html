@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HomeFinder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- bootstrap overrides -->
+  <link rel="stylesheet" type="text/css" href="assets/css/homefinder.css">
+  <script src="assets/javascript/homefinder.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+     
+
+<body>
+
+
+<div class="jumbotron"> 
+
+<h1>Home Finder</h1>
+<br>
+<h2>Explore your possibilities</h2>
+<button>Start Quiz</button>
+<button>View houses</button>
+</div>
+
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-head"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Featured Houses</div>
+
+   <div id="currentemployees"></div>
+
+</div>
+
+<table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>Work Address</th>
+      <th>Second Work Address</th>
+      <th>Work Arrival Time</th>
+      <th>Upper price range</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="table-display">
+<!--     <tr>
+      <td>Trenton Express</td>
+      <td>Trenton</td>
+      <td>25</td>
+      <td>5:36 PM</td>
+      <td>10</td>
+    </tr> -->
+  </tbody>
+</table>
+
+</div>
+
+<div class="container">
+<!--   <h2>Search Parameters</h2>
+ -->
+ <div class="panel panel-primary">
+<div class="panel-head"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Answer Questions </div>
+
+  <form id="form">
+    <div class="form-group">
+      <label for="workAddress">Work Address</label>
+      <input type="search" class="form-control" id="workAddress" name="workAddress">
+    </div>
+    <div class="form-group">
+      <label for="workAddressSecond">Second Work Address</label>
+      <input type="search" class="form-control" id="workAddressSecond" name="workAddressSecond">
+    </div>
+    <div class="form-group">
+      <label for="workArriveTime">Work Arrive Time (HH:MM - military time)</label>
+      <input class="form-control" type="search" id="workArriveTime"  name="workArriveTime">
+    </div>
+    <div class="form-group">
+      <label for="priceHigh">What is your upper price range?</label>
+      <input type="number" class="form-control" id="priceHigh"  name="priceHigh">
+    </div>
+    
+    <button type="submit" class="btn btn-default" id="btnSubmit">
+     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>submit</button>
+
+  </form>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+</body>
+</html>
